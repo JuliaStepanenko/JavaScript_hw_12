@@ -102,14 +102,10 @@ console.log("");
 console.log(" 14. Дан массив с числами [5, 6, 7, 8, 9]. Найдите сумму этих чисел.");
 let arr14 = [5, 6, 7, 8, 9];
 let summaArray = 0;
-
-    function calcSumma(arr){
-        for (let element = 0 ; element < arr.length; element++){
-            summaArray += arr[element];
-        }
-        return summaArray;
-    }
-console.log("Сумма чисел масива = " + calcSumma(arr14));
+    summaArray = arr14.reduce(function(summa, elem) {
+        return summa + elem;
+    }, 0);
+console.log("Сумма чисел масива = " + summaArray);
 console.log("");
 
 
