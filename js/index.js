@@ -98,7 +98,7 @@ console.log(arr13);
 console.log("");
 
 
-
+// Исправлено
 console.log(" 14. Дан массив с числами [5, 6, 7, 8, 9]. Найдите сумму этих чисел.");
 let arr14 = [5, 6, 7, 8, 9];
 let summaArray = 0;
