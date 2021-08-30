@@ -97,107 +97,89 @@ arr13.sort();
 console.log(arr13);
 console.log("");
 
-// Исправлено
-// Исправлено
+
+// Исправлено. Использовала reduce.
 console.log(" 14. Дан массив с числами [5, 6, 7, 8, 9]. Найдите сумму этих чисел.");
 let arr14 = [5, 6, 7, 8, 9];
 let summaArray = 0;
-    summaArray = arr14.reduce(function(summa, elem) {
-        return summa + elem;
-    }, 0);
+summaArray = arr14.reduce(function(summa, elem) {
+    return summa + elem;
+}, 0);
 console.log("Сумма чисел масива = " + summaArray);
 console.log("");
 
 
-
+// Исправлено. Использовала map.
 console.log(" 15. Дан массив с числами [5, 6, 7, 8, 9]. Сделайте из него массив, состоящий из квадратов этих чисел.");
 let arr15 = [5, 6, 7, 8, 9];
-
-    arr15.forEach(
-        function (item, index, array) {
-            array[index] = item * item;
-        }
-    );
-console.log(arr15);
+let srr15New = arr15.map(function (element){
+    return element * element;
+});
+console.log(srr15New);
 console.log("");
 
 
-
+// Исправлено. Убрала лишний if.
 console.log(" 16. Дан массив с числами [1,-3, 5, 6,-7, 8, 9,-11]. Оставьте в нем только отрицательные числа.");
 let arr16 = [1,-3, 5, 6,-7, 8, 9,-11];
 
     let arr16New = arr16.filter(
         function (item) {
-            if( item < 0){
-                return true;
-            }
-            return false;
+            return item < 0;
         }
     );
 console.log(arr16New);
 console.log("");
 
 
-
+// Исправлено. Убрала лишний if.
 console.log(" 17. Дан массив с числами [1,-3, 5, 6,-7, 8, 9,-11]. Оставьте в нем только четные числа.");
 let arr17 = [1,-3, 5, 6,-7, 8, 9,-11];
 
     let arr17New = arr17.filter(
         function (item) {
-            if( item % 2 ===0){
-                return true;
-            }
-            return false;
+            return item % 2 ===0;
         }
     );
 console.log(arr17New);
 console.log("");
 
 
-
+// Исправлено. Убрала лишний if.
 console.log(" 18. Дан массив со строками ['aaa', 'aaaqqq', 'zzzqq', 'zz', 'qsaa', 'q', 'az']. ");
 console.log(" Оставьте в нем только те строки, длина которых больше 5-ти символов.");
 let arr18 = ['aaa', 'aaaqqq', 'zzzqq', 'zz', 'qsaa', 'q', 'az'];
 
     let arr18New = arr18.filter(
         function (item) {
-            if( item.length >= 5){
-                return true;
-            }
-            return false;
+            return item.length >= 5;
         }
     );
 console.log(arr18New);
 console.log("");
 
 
-
+// Исправлено. Убрала лишний if.
 console.log(" 19. Дан массив, в нем могут быть обычные элементы и подмассивы, например [1, 2, [3, 4], 5, [6, 7]]. ");
 console.log(" Оставьте в нем только подмассивы.");
 let arr19 = [1, 2, [3, 4], 5, [6, 7]];
 
     let arr19New = arr19.filter(
         function (item) {
-            if(Array.isArray(item)){
-                return true;
-            }
-            return false;
+            return Array.isArray(item);
         }
     );
 console.log(arr19New);
 console.log("");
 
 
-
+// Исправлено. Убрала лишний if.
 console.log(" 20. Дан массив с числами [5,-3, 6,-5, 0,-7, 8, 9]. Посчитайте количество отрицательных чисел в этом массиве.");
 let arr20 = [5,-3, 6,-5, 0,-7, 8, 9];
 
     let arr20NewMinus = arr20.filter(
         function (item) {
-            if( item < 0){
-                return true;
-            }
-            return false;
+            return item < 0;
         }
     );
 console.log("Отрицательных чисел в массиве = " + arr20NewMinus.length);
